@@ -1,0 +1,10 @@
+1. python 中的顺序表的表现：list
+2. 栈：始终在一段读取
+3. 去掉print()函数默认的换行符，加end = ‘ ‘ 参数
+4. 用 insert into 表名 values (0,’’,’’,’') 语句设置值时，0是自增量ID的占位，一定要写不然会报错
+5. null和’'区别，null在内存中根本没有，’’是一个空字符串，还是会占内存
+6. 聚合，快速统计数据。count(*)计算总行数; max(id)求ID最大的行；min(列）求此列的最小值；sum(列)求和，avg(列)平均值；select count(*) from 表名 where
+7. where 对原始数据筛选，即对from后面的表名中的内容筛选，having是对group by 的结果进行筛选
+8. alter 增加列，alter table 表名 add isDelete bit default=0
+9. 更新、修改update students set name='heng' where id=1;
+10. order by 列名 desc|esc 降序|升序

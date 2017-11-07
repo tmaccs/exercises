@@ -33,16 +33,43 @@ class Tree(object):
         queue = [self.root]
         while queue:
             cur_node = queue.pop(0)
-            print(cur_node.item)
+            print(cur_node.item,end=" ")
             if cur_node.lchild is not None:
                 queue.append(cur_node.lchild)
             if cur_node.rchild is not None:
                 queue.append(cur_node.rchild)
 
+    #深度遍历_先序遍历
+    def preorder(self,node):
+        if node is None:
+            return
+        print(node.item,end=" ")
+        self.preorder(node.lchild)
+        self.preorder(node.rchild)
+
+    #深度遍历_中序遍历
+    def inorder(self,node):
+        if node is None:
+            return
+        self.inorder(node.lchild)
+        print(node.item, end=" ")
+        self.inorder(node.rchild)
+
+
 if __name__ == "__main__":
     tree = Tree()
+    tree.add(0)
     tree.add(1)
     tree.add(2)
     tree.add(3)
     tree.add(4)
+    tree.add(5)
+    tree.add(6)
+    tree.add(7)
+    tree.add(8)
+    tree.add(9)
     tree.broadth_travel()
+    print(" ")
+    tree.preorder(tree.root)
+    print(" ")
+    tree.inorder(tree.root)

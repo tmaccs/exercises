@@ -8,7 +8,7 @@ def binary_search(alist,item):
         if alist[mid_num] == item:
            return True
         elif alist[mid_num] > item:
-            # 这样切片的时候不会取到mid_num
+            # 这样切片的时候不会取到mid_
             return binary_search(alist[:mid_num],item)
         elif alist[mid_num] < item:
             return binary_search(alist[mid_num+1:],item)
